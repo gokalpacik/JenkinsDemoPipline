@@ -14,7 +14,7 @@ pipeline {
     
     stage('Run'){
     steps{
-        sh "docker run 8081:8080 jenkinsPipelineDemo:latest"
+        sh "docker run -p 8081:8080 jenkinsPipelineDemo:latest"
      }
    }  
   
