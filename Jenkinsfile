@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Restore packages') {
       steps {
-        sh 'docker build . -t jenkinsPipelineDemo:latest -f JenkinsDemoPipline/Dockerfile'
+        sh 'docker build . -t jenkinspipelinedemo:latest -f JenkinsDemoPipline/Dockerfile'
       }
     }
   stage('Clean'){
