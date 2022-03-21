@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Restore packages') {
       steps {
-        sh 'docker build . -t my-web-app -f JenkinsDemoPipline/Dockerfile'
+        sh 'docker build . -t jenkinsPipelineDemo:latest -f JenkinsDemoPipline/Dockerfile'
       }
     }
   stage('Clean'){
@@ -11,6 +11,12 @@ pipeline {
         sh "docker image ls"
      }
    }    
+    
+    stage('Run'){
+    steps{
+        sh "docker run 8081:8080 jenkinsPipelineDemo:latest"
+     }
+   }  
   
   }
 }
