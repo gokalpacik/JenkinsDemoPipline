@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Restore packages') {
       steps {
-        bat 'dotnet restore JenkinsDemoPipline\\\\JenkinsDemoPipline.csproj'
+        sh 'docker build -t shanem/spring-petclinic:latest /JenkinsDemoPipline/.
       }
     }
   stage('Clean'){
