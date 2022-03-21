@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Restore packages') {
       steps {
-        sh 'docker build -t shanem/spring-petclinic:latest /JenkinsDemoPipline/.
+        sh 'docker build -t shanem/spring-petclinic:latest JenkinsDemoPipline/ .
       }
     }
   stage('Clean'){
