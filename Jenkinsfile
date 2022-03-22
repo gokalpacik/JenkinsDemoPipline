@@ -14,7 +14,7 @@ pipeline {
     
     stage('Run'){
     steps{
-        sh "docker run -p 8081:80 jenkinspipelinedemo:latest"
+        sh "kubectl apply"
      }
    }  
   
